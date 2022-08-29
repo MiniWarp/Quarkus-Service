@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  api-gateway:
+    build:
+      context: .
+      dockerfile: api-gateway/Dockerfile
+    image: api-gateway
+    container_name: api-gateway
+    ports:
+      - "80:8080"
+    restart: always
+    environment:
+      - DEPLOY_ENV=${DEPLOY_ENV:-dev}
+      - JAVA_OPTS=-Xms256m -Xmx256m -XX:MaxMetaspaceSize=96m -XX:MetaspaceSize=96m

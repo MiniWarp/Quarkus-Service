@@ -3,7 +3,10 @@ plugins {
     id 'io.quarkus'
 }
 
-allprojects {
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'io.quarkus'
+
     repositories {
         mavenCentral()
         mavenLocal()
