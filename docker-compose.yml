@@ -12,3 +12,5 @@ services:
     environment:
       - DEPLOY_ENV=${DEPLOY_ENV:-dev}
       - JAVA_OPTS=-Xms256m -Xmx256m -XX:MaxMetaspaceSize=96m -XX:MetaspaceSize=96m
+    networks:
+      - host
