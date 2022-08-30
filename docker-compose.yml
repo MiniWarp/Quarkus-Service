@@ -14,3 +14,7 @@ services:
       - JAVA_OPTS=-Xms256m -Xmx256m -XX:MaxMetaspaceSize=96m -XX:MetaspaceSize=96m
     networks:
       - host
+networks:
+  host:
+    name: host
+    external: true
